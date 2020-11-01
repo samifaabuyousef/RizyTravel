@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row mt-4 justify-content-center">
+  <h1>Join the Tour {{tour.tourName}} Now !</h1>
+  </div>
+  <div class="row mt-4 justify-content-center">
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+  </div>
+  <div class="row justify-content-center mt-4">
+  <p>{{tour.description}}</p>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <button class="btn btn-info" (click)="JoinRequest(tour.tourName)">Send Request Now !</button>
+  </div>
+</div>

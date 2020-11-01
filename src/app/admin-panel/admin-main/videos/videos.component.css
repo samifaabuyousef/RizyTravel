@@ -1,0 +1,20 @@
+.search-div{
+    width: 80%;
+    margin: 10px;
+    /* margin-left:100px; */
+    margin-right: 100px;
+    }
+    
+.search-form-field{
+    width: 40%;
+    margin-left: 10%;
+    padding: 5px 10px;
+    
+    border-radius: 5px;
+}
+
+
+
+.fa-trash,.fa-edit{
+    cursor: pointer;
+}

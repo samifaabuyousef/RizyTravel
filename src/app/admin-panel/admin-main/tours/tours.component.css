@@ -1,0 +1,36 @@
+.search-div{
+    width: 80%;
+    margin: 10px;
+    /* margin-left:100px; */
+    margin-right: 100px;
+    }
+    
+.search-form-field{
+    width: 40%;
+    margin-left: 10%;
+    padding: 5px 10px;
+    
+    border-radius: 5px;
+}
+
+
+
+.fa-trash,.fa-edit{
+    cursor: pointer;
+}
+
+.mat-row{        
+    position: relative;
+}
+
+.mat-row-link{
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    left: 0;
+    top: 0;             
+}
+.img-thumbnail{
+    height: 100px;
+    width: 100px;
+}

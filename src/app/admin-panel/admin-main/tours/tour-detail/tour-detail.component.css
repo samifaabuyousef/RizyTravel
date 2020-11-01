@@ -1,0 +1,17 @@
+.container {
+    margin-top: 1rem;
+}
+tabset{
+    min-width: 80%;
+    margin-left: 10%;
+
+}
+.he {
+    min-height: 60vmin;
+}
+.photoclass{
+    margin-top: 10px;
+    height:200px;
+    width: 180;
+    box-shadow:5px 10px 5px 0px aquamarine;
+}

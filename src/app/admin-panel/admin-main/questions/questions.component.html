@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/main']">Admin Page</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Questions Page</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="row mb-5">
+  <div class="search-div">
+    <mat-form-field class="search-form-field">
+        <input matInput [(ngModel)]="searchKey" placeholder="search" autocomplete="off" (keyup)="applyFilter()">
+        <button mat-button *ngIf="searchKey" matSuffix mat-icon-button aria-label="Clear" (click)="onClear()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+  </div>
+  <div class="container-fluid">
+    <div class="mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
+                <mat-cell *matCellDef="let element" >{{element.name}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="phone">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="email">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Email </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.email}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="created">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Created </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.created}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="questionText">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Question</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.questionText}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.status}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                      <button mat-icon-button (click)="EditQuestion(row.id, row.name, row.phone, row.email,  row.created ,  row.questionText , row.status)" ><mat-icon>edit</mat-icon></button>
+                    </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator [pageSize]="8" [pageSizeOptions]="[3, 5, 8, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+    </div>
+</div>
+</div>

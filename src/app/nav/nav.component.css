@@ -1,0 +1,62 @@
+:root{
+    --lightblack:#2e2c2caf;
+    --bggradient:linear-gradient(
+        to bottom,
+        rgb(159, 236, 255),#fff);
+    --bggradientdropdown:linear-gradient(
+    to bottom,
+    rgb(89, 255, 219),rgb(205, 255, 244));
+    --light-grey:rgba(255,255,255,0.7);
+}
+
+header .navbar-brand{
+    font-size: 1.2em;
+    font-family: Abel;
+    font-weight: bold;
+    
+}
+header a{
+    font-size: 0.9em;
+    color: rgb(24, 23, 26);
+}
+header{
+    background:rgb(159, 236, 255);
+
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: rgb(195, 255, 242);
+    min-width: 160px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background: rgb(217, 255, 247);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+header .nav-item:last-child{
+    padding-right: 8.5em;
+}
+header .nav-item{
+    padding: 0.9em;
+    
+}
+header .navbar-brand{
+    padding-left: 8rem;
+}
+header .nav-link:hover{
+    color: black;
+}
+.active{
+    border-bottom: 2px solid rgb(26, 135, 150);
+    
+}

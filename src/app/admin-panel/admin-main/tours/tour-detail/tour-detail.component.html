@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/main']">Admin Page</a></li>
+      <li class="breadcrumb-item " > <a [routerLink]="['/tours']">Tours Page</a> </li>
+      <li class="breadcrumb-item active" aria-current="page"> Tour Details</li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  
+  <tabset #staticTabs>
+    <tab heading="Tour" class="member-tabset">
+      <div class="row">
+        <div class="col-md-4">
+        <img src="{{tour.photoUrl || '../../../../../../assets/user.png'}}" alt="Tour Main Image" class="photoclass" >
+        </div>
+        <div class="col he">
+        <h1 class="mt-3">{{tour.tourName}}</h1 >
+        <div class="mt-4">
+        <p>{{tour.description}}</p>
+        <p>{{tour.tourStatus}}</p>
+        </div>
+        </div>
+      </div>
+    </tab>
+    <tab heading="Tour Images">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    </tab>
+    <tab heading="Tour Stages">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Stage Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stage of stages">
+          <th scope="row">{{stage.id}}</th>
+            <td>{{stage.stageName}}</td>
+            <td>{{stage.description}}</td>
+            <td>{{stage.startDate |  date:'medium' }}</td>
+          <td>{{stage.endDate | date:'medium'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </tab>
+  </tabset>
+
+
+
+ 
+</div>
+</div>

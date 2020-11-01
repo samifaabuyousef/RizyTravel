@@ -1,0 +1,33 @@
+<form #form="ngForm" (submit)="onSumbit(form)" autocomplete="off">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="formData.id">
+  <input type="hidden" name="created" #created="ngModel" [(ngModel)]="formData.created">
+  <div class="row form-group">
+    <label class="col-md-3">Video Name</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Video Name" 
+       name="videoName" #videoName="ngModel" [(ngModel)]="formData.videoName">
+    </Div>
+  </div>
+  <div class="row form-group mt-2">
+    <label class="col-md-3">Video Description</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Video description" 
+       name="description" #description="ngModel" [(ngModel)]="formData.description">
+    </Div>
+  </div>
+  <div class="row form-group mt-2">
+    <label class="col-md-3">Video Url</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Video Url" 
+       name="videoUrl" #videoUrl="ngModel" [(ngModel)]="formData.videoUrl">
+    </Div>
+  </div>
+
+
+
+  <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-primary ">Submit</button>
+      <button type="button" class="btn btn-outline-primary ml-1" [mat-dialog-close]>Close</button>
+
+  </div>
+</form>

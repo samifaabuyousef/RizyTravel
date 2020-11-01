@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/main']">Admin Page</a></li>
+      <li class="breadcrumb-item"> <a [routerLink]="['/passengers']"> Passengers Page</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Passenger Profile Page</li>
+
+    </ol>
+  </nav>
+</div>
+<div class="container mt-5">
+  <div class="text-center">
+    <h1>Passenger {{passenger.name}} Profile</h1>
+  </div>
+  <hr>
+  <div class="row mt-5 mb-2 text-center ">
+    <div class="col-4 p-2 bg-light"> <h3>Passenger Name</h3> </div>
+    <div class="col"><p>{{passenger.name}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Address</h3> </div>
+    <div class="col"><p>{{passenger.address}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Date Of Birth</h3> </div>
+    <div class="col"><p>{{passenger.dateOfBirth | date}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>National Id Number</h3> </div>
+    <div class="col"><p>{{passenger.nationalIdNumber}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Passport Number</h3> </div>
+    <div class="col"><p>{{passenger.passportNumber}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Phone Number</h3> </div>
+    <div class="col"><p>{{passenger.phone}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Email</h3> </div>
+    <div class="col"><p>{{passenger.email}}</p></div>
+  </div>
+  <hr>
+  <div class="text-center">
+    <h1>Tour {{passenger.tourId}} Details</h1>
+  </div>
+  <hr>
+  <div class="row mt-5 mb-2 text-center ">
+    <div class="col-4 p-2 bg-light"> <h3>Tour Name</h3> </div>
+    <div class="col"><p>{{tour.tourName}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Description</h3> </div>
+    <div class="col"><p>{{tour.description}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Tour Status</h3> </div>
+    <div class="col"><p>{{tour.tourStatus}}</p></div>
+  </div>
+  <div class="row  mb-2 text-center">
+    <div class="col-4 p-2 bg-light"> <h3>Tour Photo</h3> </div>
+    <div class="col"> <img src="{{tour.photoUrl}}" alt="" style="width: 100px; height:100px;"></div>
+  </div>
+  <hr>
+  <div class="text-center">
+    <h1>Tour {{tour.id}} Stages</h1>
+  </div>
+  <hr>
+  <div class="row mt-5 mb-5 text-center ">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Stage Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stage of tour.stages">
+          <th scope="row">{{stage.id}}</th>
+          <td>{{stage.stageName}}</td>
+          <td>{{stage.description}}</td>
+          <td>{{stage.startDate | date}}</td>
+          <td>{{stage.endDate | date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</div>

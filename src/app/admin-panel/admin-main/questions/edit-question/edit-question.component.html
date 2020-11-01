@@ -1,0 +1,18 @@
+<form #form="ngForm" (submit)="onSumbit(form)" autocomplete="off">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="formData.id">
+  <input type="hidden" name="name" #name="ngModel" [(ngModel)]="formData.name">
+  <input type="hidden" name="phone" #phone="ngModel" [(ngModel)]="formData.phone">
+  <input type="hidden" name="email" [(ngModel)]="formData.email" #email="ngModel" > 
+  <input type="hidden" name="created" [(ngModel)]="formData.created" #created="ngModel">
+  <input type="hidden"  name="questionText" #questionText="ngModel" [(ngModel)]="formData.questionText">
+<select name="status" [(ngModel)]="formData.status" #status="ngModel"  class="form-control">
+  <option  value="Unreviewed" >Unreviewed</option>
+  <option  value="Reviewed">Reviewed</option>                                            
+</select>
+
+  <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-primary ">Submit</button>
+      <button type="button" [disabled]="form.invalid" class="btn btn-outline-primary ml-1" [mat-dialog-close]>Close</button>
+
+  </div>
+</form>

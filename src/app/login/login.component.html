@@ -1,0 +1,34 @@
+<header>
+  <div class="container text-center">
+      <div class="row">
+          <div class="col-md-7 col-sm-12">
+              <h5>RIZY TRAVEL</h5>
+              <h1>Login</h1>
+              <div class="flex-item ">
+                          <form #loginForm="ngForm"  autocomplete="off" (ngSubmit)="login()" >
+                              <div class="form-group">
+                                  <input type="text" placeholder="Username" name="username"
+                                  [(ngModel)]="model.username"
+                                  required  class="form-control col-md-8">
+                              </div>
+                              <div class="form-group">
+                                  <input type="password" placeholder="Password" name="password"
+                                  [(ngModel)]="model.password"
+                                  required  class="form-control col-md-8">
+                              </div>                               
+                              <div class="row">
+                                  <div class="col text-center">
+                                      <button [disabled]="!loginForm.valid"  type="submit" class="btn btn-info btn-lg">Login</button>
+                                  </div>
+                              </div>
+  
+                          </form>
+              </div>
+          </div>
+          <div class="col-md-5 col-sm-12 h-25">
+              <img src="../../assets/2.png" alt="">
+          </div>
+      </div>
+  </div>
+  </header>
+  

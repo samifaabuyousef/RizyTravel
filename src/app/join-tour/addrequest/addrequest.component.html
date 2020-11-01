@@ -1,0 +1,62 @@
+<div class="flex-item ">
+  <form #requestForm="ngForm" (ngSubmit)="onSumbit(requestForm)"  autocomplete="off">
+      <div class="form-group">
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="formData.id">
+        <input type="hidden" name="tourName" #tourName="ngModel" [(ngModel)]="formData.tourName">
+        <div class="row">
+          <label class="col-md-3">Name</label>
+          <input type="text" placeholder="Enter Your Name" name="name"
+          required [(ngModel)]="formData.name"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3 ">ID number</label>
+          <input type="text" placeholder="Enter Your ID Number" name="nationalIdNumber"
+          required [(ngModel)]="formData.nationalIdNumber"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Passport </label>
+          <input  placeholder="Enter Your Passport Number" name="passportNumber"
+          required [(ngModel)]="formData.passportNumber"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Phone</label>
+          <input  placeholder="Enter Your Phone Number" name="phone"
+          required [(ngModel)]="formData.phone"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Email</label>
+          <input type="text" placeholder="Enter Your email" name="email"
+          required [(ngModel)]="formData.email"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Address</label>
+          <input type="text" placeholder="Enter Your address" name="address"
+          required [(ngModel)]="formData.address"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Date Og Birth</label>
+          <input type="date" name="dateOfBirth"
+          required [(ngModel)]="formData.dateOfBirth"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <label class="col-md-3">Nationality</label>
+          <input type="text" placeholder="Enter Your nationality" name="nationality"
+          required [(ngModel)]="formData.nationality"
+           class="form-control col-md-8">
+        </div>
+        <div class="row mt-1">
+          <div class="col text-center">
+              <button [disabled]="!requestForm.valid"  type="submit" class="btn btn-info">Send</button>
+              <button type="button" class="btn btn-outline-primary ml-1" [mat-dialog-close]>Close</button>
+          </div>
+      </div>
+      </div>
+  </form>
+</div>

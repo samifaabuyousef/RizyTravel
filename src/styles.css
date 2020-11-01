@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+header, .section-1 , .section-2, .section-3{
+    overflow-x: hidden;
+}
+h1{
+    font-family: Abel;
+    font-size: 2.5rem;
+}
+h2{
+    font-family: 'Lexend Deca', sans-serif;
+}
+h3{
+    font-family: Abel;
+    font-size: 2rem;
+}
+h6{
+    font-family: Abel;
+    font-size: 1.3rem;
+}
+a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+span{
+    font-family: Cairo;
+}
+p{
+    font-family: Livvic;
+    color: grey;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.tab-panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
+    border-bottom: 4px solid #d1e2ff;
+}
+
+.member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
+    border: 0;
+    background: none !important;
+    color: #333333;
+}
+
+.member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
+    color: #a6a6a6;
+}
+
+.member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
+    margin-top: 0px;
+}
+
+.member-tabset > .nav-tabs > li.active {
+    border-bottom: 4px solid cyan;
+    position: relative;
+}
+
+.member-tabset > .nav-tabs > li.active > a {
+    border: 0 !important;
+    color: #333333;
+}
+
+.member-tabset > .nav-tabs > li.active > a > i {
+    color: #404040;
+}
+
+.member-tabset > .tab-content {
+    margin-top: -3px;
+    background-color: #fff;
+    border: 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+}

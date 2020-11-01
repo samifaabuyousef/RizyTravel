@@ -1,0 +1,45 @@
+<form [formGroup]="addVideo" (ngSubmit)="add()">
+  <input type="hidden">
+  <div class="row form-group">
+    <label class="col-md-3">Video Name</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Video Name"
+      [ngClass]="{'is-invalid': addVideo.get('videoName').errors
+      && addVideo.get('videoName').touched}"
+      class="form-control"
+      formControlName="videoName">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Description</label>
+    <div class="col-md-8">
+      <textarea formControlName="description" 
+      [ngClass]="{'is-invalid': addVideo.get('description').errors
+      && addVideo.get('description').touched}"
+      class="form-control" placeholder="Tour Description"
+       cols="30" rows="10"
+       ></textarea>
+    </div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3">Video Url</label>
+    <div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Video Url"
+      [ngClass]="{'is-invalid': addVideo.get('videoUrl').errors
+      && addVideo.get('videoUrl').touched}"
+      class="form-control"
+      formControlName="videoUrl">                                         
+      
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-7"></div>
+  <button mat-raised-button [disabled]="!addVideo.valid" type="submit" >
+    <mat-icon>add</mat-icon>New Video
+  </button>
+  <button mat-raised-button [mat-dialog-close] class="ml-2 btn-info">
+    <mat-icon>close</mat-icon>Close
+  </button>
+  </div>
+</form>
+

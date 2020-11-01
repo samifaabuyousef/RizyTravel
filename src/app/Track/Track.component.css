@@ -1,0 +1,65 @@
+header{
+    background: linear-gradient(
+        to bottom,
+        rgb(159, 236, 255),#fff);
+}
+header .row .col-md-5{
+    padding: 4.2vmin 1vmin;
+}
+header .row .col-md-7{
+    padding: 22vmin 1vmax;
+    padding-bottom: 35vmin;
+}
+header .row .col-md-7 .btn{
+    font-size: 1rem;
+    padding: .5rem;
+    color: white;
+    background: rgb(0, 136, 106);
+    border: 1px solid rgb(0, 136, 106);
+}
+header .row .col-md-7 .btn:hover{
+    color:rgb(0, 136, 106) ;
+    background: transparent;
+    border: 1px solid rgb(0, 136, 106);
+}
+header .row .col-md-7 h5{
+    font-family: Abel;
+}
+header .container .col-md-7 h5{
+    padding: 1vmin;
+    letter-spacing: 4px;
+}
+header .container .col-md-7 h1{
+    font-size: 8.5vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+}
+header .container .col-md-7 p{
+    padding: 1vmin 5vmin;
+}
+header .row .col-md-5 img{
+    width: 55%;
+}
+
+.section-1{
+    padding: 20vmin 0;
+}
+.section-1 .row .col-md-6 .pray img{
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 0.2em;
+}
+.section-1 .row .col-md-6:last-child{
+    position: relative;
+}
+.section-1 .row .col-md-6 .panel{
+    position: absolute;
+    top: 7vmin;
+    left: -18vmin;
+    background: white;
+    border-radius: 3px;
+    text-align: left;
+    padding: 13vmin 5vmin 8vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}

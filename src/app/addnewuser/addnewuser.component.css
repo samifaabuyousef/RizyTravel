@@ -1,0 +1,46 @@
+header{
+    background: linear-gradient(
+        to bottom,
+        rgb(159, 236, 255),#fff);
+}
+header .row .col-md-5{
+    padding: 4.2vmin 1vmin;
+}
+header .row .col-md-7{
+    padding: 22vmin 1vmax;
+    padding-bottom: 35vmin;
+}
+header .row .col-md-7 .btn{
+    font-size: 1rem;
+    padding: .5rem;
+    color: white;
+    background: rgb(0, 136, 106);
+    border: 1px solid rgb(0, 136, 106);
+}
+header .row .col-md-7 .btn:hover{
+    color:rgb(0, 136, 106) ;
+    background: transparent;
+    border: 1px solid rgb(0, 136, 106);
+}
+header .row .col-md-7 h5{
+    font-family: Abel;
+}
+header .container .col-md-7 h5{
+    padding: 1vmin;
+    letter-spacing: 4px;
+}
+header .container .col-md-7 h1{
+    font-size: 8.5vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+}
+header .container .col-md-7 p{
+    padding: 1vmin 5vmin;
+}
+header .row .col-md-5 img{
+    width: 55%;
+}
+.form-group {
+    margin-left: 25%;
+    margin-bottom: 1rem;
+}

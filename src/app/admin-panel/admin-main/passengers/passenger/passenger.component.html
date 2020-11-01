@@ -1,0 +1,78 @@
+<h1>Add Passenger Form</h1>
+<hr>
+<form #addPassengerForm="ngForm" (ngSubmit)="addPassenger()" autocomplete="off">
+  <div class="row form-group">
+    <label class="col-md-3">Choose Tour</label>
+    <Div class="col-md-8">
+      <select class="form-control" name="tourId" required [(ngModel)]="model.tourId">
+      <option value="0">Select Tour</option>
+      <option  *ngFor="let t of tours" value="{{t.id}}">{{t.tourName}}</option>
+      </select>
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Name</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Enter Passenger Name " name="name"
+      required [(ngModel)]="model.name">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> National ID</label>
+    <Div class="col-md-8">
+      <input  class="form-control" placeholder="Enter Passenger ID " name="nationalIdNumber"
+      required [(ngModel)]="model.nationalIdNumber">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Passport Num</label>
+    <Div class="col-md-8">
+      <input  class="form-control" placeholder="Enter Passenger Passport Num " name="passportNumber"
+      required [(ngModel)]="model.passportNumber">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Phone</label>
+    <Div class="col-md-8">
+      <input  class="form-control" placeholder="Enter Passenger Phone Num " name="phone"
+      required [(ngModel)]="model.phone">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Email</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Enter Passenger Email " name="email"
+      required [(ngModel)]="model.email">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Nationality</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Enter Passenger Nationality " name="nationality"
+      required [(ngModel)]="model.nationality">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Address</label>
+    <Div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Enter Passenger Address " name="address"
+      required [(ngModel)]="model.address">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <label class="col-md-3"> Date Of Birth</label>
+    <Div class="col-md-8">
+      <input type="date" class="form-control" placeholder="Enter Passenger " name="dateOfBirth"
+      required [(ngModel)]="model.dateOfBirth">
+    </Div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-7"></div>
+  <button mat-raised-button type="submit" [disabled]="!addPassengerForm.valid">
+    <mat-icon>add</mat-icon>New Passenger 
+  </button>
+  <button mat-raised-button [mat-dialog-close] class="ml-2 btn-info">
+    <mat-icon>close</mat-icon>Close
+  </button>
+  </div>
+</form>

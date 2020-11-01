@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Tour Form</h1>
+  <hr>
+  <form [formGroup]="addTour" (ngSubmit)="add()">
+    <input type="hidden">
+    <div class="row form-group">
+      <label class="col-md-3">Tour Name</label>
+      <Div class="col-md-8">
+        <input type="text" class="form-control" placeholder="Tour Name"
+        [ngClass]="{'is-invalid': addTour.get('tourName').errors
+        && addTour.get('tourName').touched}"
+        class="form-control"
+        formControlName="tourName">
+      </Div>
+    </div>
+    <div class="row form-group">
+      <label class="col-md-3">Tour Description</label>
+      <div class="col-md-8">
+        <textarea formControlName="description" 
+        [ngClass]="{'is-invalid': addTour.get('description').errors
+        && addTour.get('description').touched}"
+        class="form-control" placeholder="Tour Description"
+         cols="30" rows="10"
+         ></textarea>
+      </div>
+    </div>
+    <div class="row form-group">
+      <label class="col-md-3">Status</label>
+      <div class="col-md-8">
+        <select formControlName="tourStatus"  class="form-control">
+          <option  value="true" >Active</option>
+          <option  value="false">Not Active</option>                                            
+        </select>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-7"></div>
+    <button mat-raised-button [disabled]="!addTour.valid" type="submit" >
+      <mat-icon>add</mat-icon>New Tour
+    </button>
+    <button mat-raised-button [mat-dialog-close] class="ml-2 btn-info">
+      <mat-icon>close</mat-icon>Close
+    </button>
+    </div>
+  </form>
+</div>

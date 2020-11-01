@@ -1,0 +1,154 @@
+<header>
+  <div class="container text-center">
+      <div class="row">
+          <div class="col-md-7 col-sm-12">
+              <h5>RIZY TRAVEL</h5>
+              <h1>EXITING TOURS</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Autem soluta adipisci dolores blanditiis voluptatum ad in commodi.
+                  Magnam, eveniet soluta.</p>
+              <a [routerLink]="['/ask']"  class="btn px-5 py-2">Ask Us Now!</a>
+          </div>
+          <div class="col-md-5 col-sm-12 h-25">
+              <img src="../../assets/2.png"  alt="">
+          </div>
+      </div>
+  </div>
+  </header>
+  <main>
+      <section class="section-1">
+          <div class="container text-center">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="pray">
+                          <img src="../../assets/afterheader.png" alt="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="panel text-left">
+                          <h1>Best Choice For Your Tour</h1>
+                          <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              Alias vel officiis qui laborum inventore quisquam rem ad unde magnam modi.
+                          </p>
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis voluptatum 
+                              nulla nihil dolore fugiat tenetur ea, eveniet adipisci voluptates cupiditate sit ipsum, 
+                              eligendi perspiciatis quia illo ducimus. Excepturi dolorem iste voluptatem, ullam sunt
+                               voluptatibus, consectetur omnis soluta obcaecati libero recusandae.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="container">
+      <h1 class="text-center mt-3 mb-5">Tours On Fire</h1>
+      <owl-carousel [options]="SlideOptions" [items]="tours" [carouselClasses]="['owl-theme', 'sliding']" >  
+          <div class="item " *ngFor="let tour of tours ; let i=index">
+              <div class="blog-content m-4 shadow" *ngIf="i < 5">
+                  <img src={{tour.photoUrl}} style="width: 100%; height: 200px;" alt="post-1">
+                  <div class="blog-title text-center">
+                      <h3>{{tour.tourName}}</h3>
+                      <a class="btn btn-info" [routerLink]="['jointour/'+tour.id]">Join The Tour</a>
+                      <span *ngIf="tour.tourStatus == true">Open</span>
+                      <span *ngIf="tour.tourStatus == false">Close</span>
+                  </div>
+              </div>  
+          </div>  
+      </owl-carousel>
+      </div>
+      <section class="section-2 container-fluid p-0 mt-5">
+          <div class="cover">
+              <div class="content text-center">
+                  <h1>Track Your Tour</h1>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, suscipit.</p>
+              </div>
+          </div>
+          <div class="container-fluid text-center">
+              <div class="rect-text d-flex flex-md-row flex-wrap justify-content-center">
+                  <div class="rect">
+                      <h1>Easy </h1>
+                      <p>Track Tour Easily</p>
+                  </div>
+                  <div class="rect">
+                      <h1>Unique </h1>
+                      <p>Exclusive Features</p>
+                  </div>
+                  <div class="rect">
+                      <h1>Enjoyable</h1>
+                      <p>Enjoy The Plans</p>
+                  </div>
+                  <div class="rect">
+                      <h3>Track it</h3>
+                      <button class="btn btn-info"> Press Here</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="section-3">
+          <div class="container text-center">
+              <h1 class="text-dark">Gallery</h1>
+              <p class="text-secondary">Have a Look on our Tours Gallery</p>
+          </div>
+          <div class="team row">
+              <div class="col-md-4 col-12 text-center">
+                  <div class="card mr-2 d-inline-block shadow-lg">
+                    <iframe width="100%" height="280"
+                       src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                      <div class="card-body">
+                          <h5 class="card-title">Best Tours</h5>
+                          <p class="card-text">Rizy Travel is The Best Choice.</p>
+                          <button href="#" class="btn btn-info">Watch the Video</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 col-12">
+                  
+                  <carousel class="text-center">
+                      <slide>
+                          <div class="card mr-2 d-inline-block shadow-lg">
+                            <iframe width="100%" height="280"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            </iframe>
+                                  <div class="card-body">
+                                  <h5 class="card-title">Best HoneyMoons</h5>
+                                  <p class="card-text">We Offer You the Best Honeymoon Plans.</p>
+                                  <button href="#" class="btn btn-info">Watch the Video</button>
+                              </div>
+                          </div>
+                      </slide>
+                      <slide>
+                          
+                          <div class="card mr-2 d-inline-block shadow-lg">
+                            <iframe width="100%" height="280"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            </iframe>
+                              <div class="card-body">
+                                  <h5 class="card-title">Feel Freedom</h5>
+                                  <p class="card-text">Feel it in our Tours With Best Guids.</p>
+                                  <button href="#" class="btn btn-info">Watch the Video</button>
+                              </div>
+                          </div>
+                      </slide>
+                    </carousel>
+                  
+              </div>
+              <div class="col-md-4 col-12 text-center">
+                      
+                      <div class="card mr-2 d-inline-block shadow-lg">
+                        <iframe width="100%" height="280"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            </iframe>
+                          <div class="card-body">
+                              <h5 class="card-title">Experienced Tour Guides</h5>
+                              <p class="card-text">Experienced Tour Guides For Best Tour.</p>
+                              <button href="#" class="btn btn-info">Watch the Video</button>
+                          </div>
+                      </div>
+              </div>
+          </div>
+              
+          
+      </section>
+  </main>
+  

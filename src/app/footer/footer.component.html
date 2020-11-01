@@ -1,0 +1,44 @@
+<footer>
+  <div class="container-fluid p-0">
+      <div class="row text-left">
+          <div class="col-md-5 col-md-5">
+              <h1 class="text-light">About us</h1>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Eligendi blanditiis modi, obcaecati iste nobis molestiae.
+              </p>
+              <p class="pt-4 text-muted">
+                  Copyright &copy; 2019 All Rights Reserved | This Website Designed By 
+                  <span>ٍٍSami Abu Yousef</span>
+              </p>
+          </div>
+          <div class="col-md-5">
+              <h1 class="text-light">News Letter</h1>
+              <p class="text-muted">Stay Updated</p>
+              <form #emailForm="ngForm" (ngSubmit)="AddEmail()"  class="form-inline">
+                  <div class="col p-0">
+                      <div class="input-group pr-5">
+                          <input type="text" name="emailText" id="emailText" [(ngModel)]="model.emailText"
+                          class="form-control bg-dark text-white" placeholder="Email">
+                          <div class="input-group-prepend">
+                              <button type="submit" class="input-group-text" [disabled]="!emailForm.valid" >
+                                  <i class="fa fa-arrow-right"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="col-md-2 col-sm-12">
+                  <h1 class="text-light">Follow us</h1>
+                  <p class="text-muted">Let us Be Social</p>
+                  <div class="column text-light">
+                      <i class="fa fa-facebook-f"></i>
+                      <i class="fa fa-instagram"></i>
+                      <i class="fa fa-twitter"></i>
+                      <i class="fa fa-youtube"></i>
+                  </div>
+          </div>
+      </div>
+  </div>
+
+</footer>

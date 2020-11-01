@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/main']">Admin Page</a></li>
+      <li class="breadcrumb-item"> <a [routerLink]="['/requests']"> Tour Requests Page</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Request Page</li>
+
+    </ol>
+  </nav>
+</div>
+
+<div class="container justify-content-center mt-5">
+  <form #requestForm="ngForm" (submit)="onSumbit()"  autocomplete="off">
+    <div class="form-group">
+      <div class="row">
+        <label class="col-md-3">Request Id</label>
+        <input disabled   class="form-control col-md-8" name="id" #id="ngModel" [(ngModel)]="request.id">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Tour Name</label>
+        <input disabled   class="form-control col-md-8" name="tourName" #tourName="ngModel" [(ngModel)]="request.tourName">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Name</label>
+        <input disabled type="text" placeholder="Enter Your Name" name="name"
+        required [(ngModel)]="request.name"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3 ">ID number</label>
+        <input disabled type="text" placeholder="Enter Your ID Number" name="nationalIdNumber"
+        required [(ngModel)]="request.nationalIdNumber"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Passport </label>
+        <input disabled type="text" placeholder="Enter Your Passport Number" name="passportNumber"
+        required [(ngModel)]="request.passportNumber"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Phone</label>
+        <input  disabled placeholder="Enter Your Phone Number" name="phone"
+        required [(ngModel)]="request.phone"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Email</label>
+        <input disabled type="text" placeholder="Enter Your email" name="email"
+        required [(ngModel)]="request.email"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Address</label>
+        <input disabled type="text" placeholder="Enter Your address" name="address"
+        required [(ngModel)]="request.address"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Date Og Birth</label>
+        <input disabled type="datetime" name="dateOfBirth"
+        required [(ngModel)]="request.dateOfBirth"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Nationality</label>
+        <input disabled type="text" placeholder="Enter Your nationality" name="nationality"
+        required [(ngModel)]="request.nationality"
+         class="form-control col-md-8">
+      </div>
+      <div class="row mt-1">
+        <label class="col-md-3">Status</label>
+        <select name="status" [(ngModel)]="request.status" #status="ngModel"  class="form-control col-md-8">
+          <option  value="New" >Unreviewed</option>
+          <option  value="Reviewed">Reviewed</option>                                            
+        </select>
+      </div>
+      
+      <div class="row mt-5 mb-5">
+        <div class="col text-center">
+            <button [disabled]="!requestForm.valid"  type="submit" class="btn btn-info">Update</button>
+            <button *ngIf="request.status == 'Reviewed'"  type="submit" class="btn btn-info ml-1" (click)="generatePdf()">Print PDF</button>
+
+        </div>
+    </div>
+    </div>
+</form>
+</div>

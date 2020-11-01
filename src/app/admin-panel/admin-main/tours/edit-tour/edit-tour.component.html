@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/main']">Admin Page</a></li>
+      <li class="breadcrumb-item " > <a [routerLink]="['/tours']">Tours Page</a> </li>
+      <li class="breadcrumb-item active" aria-current="page"> Edit Tour Page</li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  
+  <tabset #staticTabs>
+    <tab heading="Tour" class="member-tabset">
+      <div class="row">
+        <div class="col-md-4">
+        <img src="{{tour.photoUrl || '../../../../../../../assets/user.png' }}" alt="Tour Main Image" class="photoclass" >
+        </div>
+        <div class="col he">
+          <div *ngIf="editForm.dirty" class="alert alert-info mt-5">
+            <p><strong>Information!</strong> You have made Changes. any unsaved Changes will be Lost!</p>
+          </div>
+          <form #editForm="ngForm" (ngSubmit)="updateTour()" class="mt-5">
+            <div class="row form-group">
+              <div class="col">
+                <input type="text" class="form-control" name="tourName" [(ngModel)]="tour.tourName">
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <textarea type="text" class="form-control" name="description"   cols="30" rows="10" [(ngModel)]="tour.description"></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <select name="tourstatus" [(ngModel)]="tour.tourStatus"  class="form-control">
+                  <option  value="true" >Active</option>
+                  <option  value="false">Not Active</option>                                            
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <button [disabled]="!editForm.dirty" type="submit" class="btn btn-primary"> Save </button>
+            </div>
+          </form>
+        
+        
+        </div>
+      </div>
+    </tab>
+    <tab heading="Tour Images">
+      <app-photo-editor [photos]="tour.photos" (getTourPhotoChange)="updateMainPhoto($event)"></app-photo-editor>
+    </tab>
+    <tab heading="Tour Stages">
+      <app-stages-editor></app-stages-editor>
+    </tab>
+  </tabset>
+
+
+
+ 
+</div>
+</div>
